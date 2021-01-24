@@ -1,1 +1,4 @@
-# AlgorithmStudy
+# SSAFY 알고리즘 스터디
+
+## 모임 일정
+## 모임 규칙
