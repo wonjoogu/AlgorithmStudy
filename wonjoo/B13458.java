@@ -7,8 +7,8 @@ public class B13458 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int n = sc.nextInt(); //½ÃÇèÀå ¼ö
-		int[] a = new int[n];//ÀÀ½ÃÀÚ ¼ö
+		int n = sc.nextInt(); //ì‹œí—˜ì¥ ìˆ˜
+		int[] a = new int[n];//ì‘ì‹œì ìˆ˜
 		
 		long cnt = 0;
 		
@@ -16,24 +16,23 @@ public class B13458 {
 			a[i] = sc.nextInt();
 		}
 		
-		int b = sc.nextInt();//ÃÑ°¨µ¶°ü
-		int c = sc.nextInt();//ºÎ°¨µ¶°ü
+		int b = sc.nextInt();//ì´ê°ë…ê´€
+		int c = sc.nextInt();//ë¶€ê°ë…ê´€
 		
 		for (int i = 0; i < n; i++) {
-			a[i]-=b;//ÃÑ°¨µ¶°üÀº ¹«Á¶°Ç 1¸íÀÌ¾î¾ßÇÑ´Ù.
+			a[i]-=b;//ì´ê°ë…ê´€ì€ ë¬´ì¡°ê±´ 1ëª…ì´ì–´ì•¼í•œë‹¤.
 			cnt++;
 			if(a[i] <= 0) {
 				continue;
 			}
 			else {
 				cnt += a[i] / c;
-				if(a[i] % c > 0) //³ª¸ÓÁö ºÎ°¨µ¶°üÀ¸·Î Ã¤¿ì±â
+				if(a[i] % c > 0) //ë‚˜ë¨¸ì§€ ë¶€ê°ë…ê´€ìœ¼ë¡œ ì±„ìš°ê¸°
 					cnt++;
 			}
 			}
 		System.out.println(cnt);
 		}				
-
 
 	}
 
