@@ -1,35 +1,36 @@
 package wonjoo;
 
 import java.util.Scanner;
-//¹æ ¹øÈ£
+//ë°© ë²ˆí˜¸
 public class B1475 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		String n = sc.next();
-		int[] N = new int[10];//0~9 ¼ıÀÚ Ä«µå ÀúÀå
+		int[] N = new int[10];//0~9 ìˆ«ì ì¹´ë“œ ì €ì¥
 		int tmp;
 
 		for(int i = 0; i < n.length(); i++) {
-			tmp = n.charAt(i) - '0';//Á¤¼öÇüÀ¸·Î ÀüÈ¯
-			N[tmp]++;//¹è¿­¿¡ Á¤¼öÇü ÀúÀå
+			tmp = n.charAt(i) - '0';//ì •ìˆ˜í˜•ìœ¼ë¡œ ì „í™˜
+			N[tmp]++;//ë°°ì—´ì— ì •ìˆ˜í˜• ì €ì¥
 		}
 		
 		int max = 0;
 		
-		if((N[6] + N[9]) % 2 == 1) {//¿¹¸¦µé¾î 99999 ´Ù¼¸ÀÚ¸®ÀÌ¸é 6,9ÀÇ °³¼ö·Î ³ª´©¸é ÇÏ³ª°¡ ³²´Â´Ù.
+		if((N[6] + N[9]) % 2 == 1) {//ì˜ˆë¥¼ë“¤ì–´ 99999 ë‹¤ì„¯ìë¦¬ì´ë©´ 6,9ì˜ ê°œìˆ˜ë¡œ ë‚˜ëˆ„ë©´ í•˜ë‚˜ê°€ ë‚¨ëŠ”ë‹¤.
 			max = (N[6] + N[9]) % 2 + 1;
-		}else {//Â¦¼ö °³¼öÀÌ¸é 2·Î ³ª´®
+		}else {//ì§ìˆ˜ ê°œìˆ˜ì´ë©´ 2ë¡œ ë‚˜ëˆ”
 			max = (N[6] + N[9]) / 2;
 		}
 		
 		N[6] = 0;
 		N[9] = 0;
 		
-		for (int p:N) {//ÃÖ´ë°ª »Ì±â 
+		for (int p:N) {//ìµœëŒ€ê°’ ë½‘ê¸° 
 			max = Math.max(max, p);
 		}
 		System.out.println(max);
 	}
+	
 }
