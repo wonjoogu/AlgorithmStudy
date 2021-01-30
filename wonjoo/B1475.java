@@ -32,5 +32,4 @@ public class B1475 {
 		}
 		System.out.println(max);
 	}
-	
 }
