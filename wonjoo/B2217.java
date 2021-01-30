@@ -2,7 +2,7 @@ package wonjoo;
 
 import java.util.Arrays;
 import java.util.Scanner;
-//·ÎÇÁ
+//ë¡œí”„
 public class B2217 {
 
 	public static void main(String[] args) {
@@ -16,15 +16,16 @@ public class B2217 {
 			n[i] = sc.nextInt();
 		}
 		
-		Arrays.sort(n);//¹è¿­ ¿À¸§Â÷¼ø Á¤·Ä
+		Arrays.sort(n);//ë°°ì—´ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 		int max = 0;
 
-		for (int i = N - 1; i >= 0; i--) {//¹è¿­¿¡¼­ °¡Àå Å« ¼öºÎÅÍ ²¨³¿
-				n[i] *= N-i;// ¹è¿­ Ã¹¹øÂ° ¼ýÀÚÀÎ 10¿¡ 2¸¦ °öÇÔ
-				max = Math.max(max, n[i]);//0°ú 20Áß ÃÖ´ë°ª ÀúÀå
+		for (int i = N - 1; i >= 0; i--) {//ë°°ì—´ì—ì„œ ê°€ìž¥ í° ìˆ˜ë¶€í„° êº¼ëƒ„
+				n[i] *= N-i;// ë°°ì—´ ì²«ë²ˆì§¸ ìˆ«ìžì¸ 10ì— 2ë¥¼ ê³±í•¨
+				max = Math.max(max, n[i]);//0ê³¼ 20ì¤‘ ìµœëŒ€ê°’ ì €ìž¥
 			}
-		System.out.println(max);//ÃÖ´ë°ª Ãâ·Â
+		System.out.println(max);//ìµœëŒ€ê°’ ì¶œë ¥
 	}
 }
+
 
 
