@@ -7,12 +7,13 @@ public class B11726 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int[] list = new int[1001]; //nÀº 1¿¡¼­ 1000»çÀÌ
-		list[1] = 1;//2*1ÀÏ¶§ 1°³
-		list[2] = 2;//2*2ÀÏ ¶§ 2°³
+		int[] list = new int[1001]; //nì€ 1ì—ì„œ 1000ì‚¬ì´
+		list[1] = 1;//2*1ì¼ë•Œ 1ê°œ
+		list[2] = 2;//2*2ì¼ ë•Œ 2ê°œ
 		for (int i = 3; i <= n; i++) {
-			list[i] = (list[i - 1] + list[i - 2]) % 10007; // n°³ÀÇ Å¸ÀÏ = (n-2) + (n-1)
+			list[i] = (list[i - 1] + list[i - 2]) % 10007; // nê°œì˜ íƒ€ì¼ = (n-2) + (n-1)
 		}		
 		System.out.println(list[n]);
 	}
 }
+
